@@ -2,18 +2,21 @@ package access;
 
 public class SpeakerMain {
     public static void main(String[] args) {
-        Speaker speaker = new Speaker(10);
+        Speaker speaker = new Speaker(90);
 
-        speaker.volumeUP();
+        speaker.setVolumeUp();
+        speaker.setVolumeUp();
+
         speaker.showVolume();
 
-        speaker.volumeDown();
+        speaker.setVolumeDown();
+        speaker.setVolumeDown();
+        speaker.setVolumeDown();
+
         speaker.showVolume();
 
-        speaker.volumeDown();
-        speaker.showVolume();
-        
-        speaker.volumeDown();
+        System.out.println("volume 필드 직접 접근 수정");
+        //speaker.volume = 200;
         speaker.showVolume();
     }
 }
