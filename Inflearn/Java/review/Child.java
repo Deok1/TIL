@@ -1,11 +1,18 @@
-package poly.overriding;
+package poly.diamond;
 
-public class Child extends Parent {
-
-    public String value = "child";
+public class Child implements InterfaceA, InterfaceB {
+    @Override
+    public void methodA() {
+        System.out.println("Child.methodA");
+    }
 
     @Override
-    public void method() {
-        System.out.println("Child.method");
+    public void methodB() {
+        System.out.println("Child.methodB");
+    }
+
+    @Override
+    public void methodCommon() {
+        System.out.println("Child.methodCommon");
     }
 }
