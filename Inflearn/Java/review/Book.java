@@ -1,25 +1,18 @@
-package construct.ex;
+package extends1.ex;
 
-public class Book {
-    String title;
-    String author;
-    int page;
+public class Book extends Item {
+    private String author;
+    private String isbn;
 
-    Book() {
-        this("", "", 0);
-    }
-
-    Book(String title, String author) {
-        this(title, author, 0);
-    }
-
-    Book(String title, String author, int page) {
-        this.title = title;
+    public Book(String name, int price, String author, String isbn) {
+        super(name, price);
         this.author = author;
-        this.page = page;
+        this.isbn = isbn;
     }
 
-    void displayInfo() {
-        System.out.println("제목:" + title + ", 저자:" + author + ", 페이지:" + page);
+    @Override
+    public void print() {
+        super.print();
+        System.out.println("- 저자:" + author + ", isbn:" + isbn);
     }
 }

@@ -1,16 +1,12 @@
-package static2.ex;
+package extends1.overriding;
 
 public class Car {
-    private String carName;
-    private static int carCount;
-
-    public Car(String carName) {
-        this.carName = carName;
-        System.out.println("차량 구입, 이름:" + carName);
-        carCount++;
+    public void move() {
+        System.out.println("차를 이동합니다.");
     }
 
-    public static void showTotalCars() {
-        System.out.println(carCount);
+    //추가
+    public void openDoor() {
+        System.out.println("문을 엽니다.");
     }
 }
