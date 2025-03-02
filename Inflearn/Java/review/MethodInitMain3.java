@@ -3,16 +3,27 @@ package construct;
 public class MethodInitMain3 {
     public static void main(String[] args) {
         MemberInit member1 = new MemberInit();
-        member1.initMember("김덕일", 29, 100);
+        member1.initMember("user1", 15, 90);
+
         MemberInit member2 = new MemberInit();
-        member2.initMember("김", 20, 20);
+        member1.initMember("user2", 16, 80);
 
-        MemberInit[] members = {member1, member2};
+        MemberInit[] memberInits = {member1, member2};
 
-        for (MemberInit member : members) {
-            System.out.println("이름:" + member.name);
-            System.out.println("나이:" + member.age);
-            System.out.println("성적:" + member.grade);
+        for (MemberInit memberInit : memberInits) {
+            System.out.println("이름: " + memberInit.name + ", 나이: " + memberInit.age + ", 성적: " + memberInit.grade);
+        }
+    }
+
+    public static class MemberInit {
+        String name;
+        int age;
+        int grade;
+
+        void initMember(String name, int age, int grade) {
+            this.name = name;
+            this.age = age;
+            this.grade = grade;
         }
     }
 }
