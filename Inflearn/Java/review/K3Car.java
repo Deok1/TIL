@@ -1,4 +1,4 @@
-package poly.car1;
+package poly.Car1;
 
 public class K3Car implements Car {
     @Override

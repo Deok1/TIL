@@ -1,26 +1,10 @@
-package static1.ex;
+package poly.Car0;
 
 public class CarMain {
     public static void main(String[] args) {
-        Car car1 = new Car("K3");
-        Car car2 = new Car("G80");
-        Car car3 = new Car("Model Y");
-
-        Car.showTotalCars();
-    }
-
-    public static class Car {
-        private String carName;
-        private static int count;
-
-        Car(String carName) {
-            System.out.println("차량 구입, 이름: " + carName);
-            this.carName = carName;
-            count++;
-        }
-
-        public static void showTotalCars() {
-            System.out.println("구매한 차량 수 : " + count);
-        }
+        Driver driver = new Driver();
+        K3Car k3Car = new K3Car();
+        driver.setK3Car(k3Car);
+        driver.drive();
     }
 }
