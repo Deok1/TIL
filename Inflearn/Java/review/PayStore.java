@@ -1,16 +1,14 @@
-package poly.ex.Pay1;
+package poly.ex.pay0;
 
 public class PayStore {
 
-    public static Pay findPay(String option ) {
+    public static Pay findPay(String option) {
         if (option.equals("kakao")) {
             return new KakaoPay();
         } else if (option.equals("naver")) {
             return new NaverPay();
         } else {
-            System.out.println("결제 수단이 없습니다.");
-            return null;
+            return new DefaultPay();
         }
     }
-
 }

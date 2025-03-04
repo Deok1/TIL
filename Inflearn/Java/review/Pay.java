@@ -1,5 +1,6 @@
-package poly.ex.Pay1;
+package poly.ex.pay0;
 
 public interface Pay {
+
     boolean pay(int amount);
 }
