@@ -7,7 +7,7 @@ public class Chicken extends AbstractAnimal implements Fly {
     }
 
     @Override
-    public void fly() {
+    public void Fly() {
         System.out.println("닭 날기");
     }
 }
