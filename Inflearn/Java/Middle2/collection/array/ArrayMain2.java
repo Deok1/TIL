@@ -35,16 +35,17 @@ public class ArrayMain2 {
     }
 
     private static void addFist(int[] arr, int newValue) {
-        for (int i = arr.length - 1; i > 0; i--) {
+        for (int i = arr.length - 1; i > 0; i--) {      // 오른쪽부터 밀어야 하므로 'arr.length -1' 에서 감소연산자를 사용
             arr[i] = arr[i - 1];
         }
         arr[0] = newValue;
     }
 
     private static void addAtIndex(int[] arr, int index, int newValue) {
-        for (int i = arr.length - 1; i > index; i--) {
+        for (int i = arr.length - 1; i > index; i--) {  // 오른쪽부터 밀어야 하므로 'arr.length -1' 에서 감소연산자를 사용
             arr[i] = arr[i -1];
         }
         arr[index] = newValue;
     }
 }
+
