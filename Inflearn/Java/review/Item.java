@@ -1,20 +1,21 @@
-package extends1.ex;
+package collection.list.test.ex2;
 
 public class Item {
-
     private String name;
     private int price;
+    private int quantity;
 
-    public Item(String nema, int price) {
-        this.name = nema;
+    public Item(String name, int price, int quantity) {
+        this.name = name;
         this.price = price;
+        this.quantity = quantity;
     }
 
-    public void print() {
-        System.out.println("이름:" + name + ", 가격:" + price);
+    public String getName() {
+        return name;
     }
 
-    public int getPrice() {
-        return price;
+    public int getTotalPrice() {
+        return price * quantity;
     }
 }
