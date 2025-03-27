@@ -12,6 +12,6 @@ public class MyArray implements Iterable<Integer> {     //Iterable을 붙임으�
 
     @Override
     public Iterator<Integer> iterator() {
-        return new MyArrayIterator(numbers);
+        return new MyArrayIterator(numbers);    //자료 구조에 사용할 반복자(Iterator)를 반환
     }
 }
