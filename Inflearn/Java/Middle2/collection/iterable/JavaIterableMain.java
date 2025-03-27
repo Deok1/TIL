@@ -29,7 +29,7 @@ public class JavaIterableMain {
         }
     }
 
-    private static void foreach(Iterable<Integer> iterable) {
+    private static void foreach(Iterable<Integer> iterable) {       //for-each문은 Iterable 인터페이스를 구현한 객체에 한해서만 사용가능
         System.out.println("iterable = " + iterable.getClass());
         for (Integer i : iterable) {
             System.out.println(i);
